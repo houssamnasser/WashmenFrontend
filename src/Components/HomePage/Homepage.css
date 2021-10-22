@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    padding: 3%;
+    overflow-y: scroll;
+  }
+
+  #rangeInput {
+    border-radius: 0.5em;
+    border: 1px solid #949494;
+    color: grey;
+    padding: 3% 2%;
+    width: 100%;
+  }
+
+  #rangeInput:focus {
+    outline: none;
+    border: 1px solid rgb(37, 37, 219);
+    color: black;
+  }
+
+  .cardsSection {
+    flex: 100%;
+    box-shadow: none !important;
+  }
+
+  .mobileVisibilityHidden {
+    display: none;
+  }
+}
+
+/*input section */
+.inputSection {
+  flex: 25%;
+  padding: 1%;
+}
+
+.inputSectionHr {
+  display: block;
+  margin: 1% auto;
+  width: 70%;
+  background: #ffffff;
+  height: auto;
+}
+
+.cardsSection {
+  flex: 75%;
+  background-color: #102445;
+  flex-wrap: wrap;
+  box-shadow: 5px 10px 8px 10px #888888;
+  padding-top: 2%;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* inputs */
+#rangeInput {
+  width: -webkit-fill-available;
+  margin: 0 0;
+  outline: none;
+  font-size: 1rem;
+  border-bottom: 2px solid #dbdbdb;
+}
+
+#rangeInput:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(37, 37, 219);
+}
+
+.validationErrors {
+  padding: 1% 0;
+  color: rgb(238, 83, 83);
+  margin-top: 5%;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3%;
+}
+
+.form-group {
+  margin: 10% 5% 10% 0px;
+}
+
+.form-control {
+  border: none;
+}
+
+/* Submit Button */
+.submitButton {
+  background-color: #102445;
+  outline: none;
+  display: block;
+  padding: 5% 15%;
+  border-radius: 7%;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1rem;
+  margin: 5% auto;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.submitButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submitButton span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submitButton:hover span {
+  padding-right: 25px;
+}
+
+.submitButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* loader */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgb(0, 20, 51);
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card {
+  height: 30vh;
+  background-color: #102445;
+  width: 30%;
+  margin: 1%;
+  overflow-y: auto;
+  border-radius: 10px;
+  color: #102445;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  color: white;
+  border: 0.5rem solid white;
+  text-align: center;
+}
+
+.css-46bh2p-MuiCardContent-root {
+  padding-bottom: 0px !important;
+}
+
+.pagination {
+  flex-basis: 100%;
+  margin: 3% auto;
+}

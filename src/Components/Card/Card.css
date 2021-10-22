@@ -1,0 +1,45 @@
+.organization {
+  font-size: 1.5rem;
+  margin: 30px auto;
+}
+
+hr {
+  display: block;
+  margin: 1% auto;
+  width: 70%;
+  background: #102445;
+  height: 1%;
+}
+
+.css-16m3jxf-MuiTypography-root,
+.css-1pnmrwp-MuiTypography-root,
+.css-1p5q5e5-MuiStack-root,
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root {
+  color: white !important;
+}
+
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: black !important;
+}
+
+.css-46bh2p-MuiCardContent-root:last-child {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .cardsContainer {
+    flex-direction: column;
+  }
+
+  .card {
+    width: -webkit-fill-available;
+  }
+}
+
+.distance {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
